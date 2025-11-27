@@ -226,19 +226,6 @@ function majLangue() {
             lienCV.href = "pages/Matheis_GILBRIN_CV_EN.pdf";
         }
     }
-
-    const btnsDetails = document.querySelectorAll('.bouton-voir-details');
-    btnsDetails.forEach(btn => {
-        const bulle = btn.closest('.bulle-info');
-        if(bulle){
-            const details = bulle.querySelector('.details-projet');
-            if (details && details.style.display === 'block') {
-                btn.innerHTML = t.btn_see_less;
-            } else {
-                btn.innerHTML = t.btn_see_more;
-            }
-        }
-    });
 }
 
     document.getElementById("toggleLang").textContent = langueActuelle === "fr" ? "EN" : "FR";
