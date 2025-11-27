@@ -975,3 +975,49 @@ fieldset {
   box-shadow: 0 5px 15px rgba(0, 119, 255, 0.2);
   transform: translateY(-2px);
 }
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #f0f2f5;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  border-color: #0077ff;
+  z-index: 10;
+}
+.github-btn {
+  background-color: #24292e;
+  border-color: #24292e;
+  color: white !important;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+  background-color: #000000;
+  border-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
