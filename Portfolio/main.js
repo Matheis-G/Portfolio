@@ -1,4 +1,3 @@
-// On attend que la carte de présentation soit là
 const cartePresentation = document.getElementById("cartePresentation");
 if (cartePresentation) {
     setTimeout(() => {
@@ -6,18 +5,15 @@ if (cartePresentation) {
     }, 3000);
 }
 
-// --- DICTIONNAIRE DE TRADUCTION ---
 const traductions = {
     fr: {
-        // Header & Footer
         nav_about: "Présentation",
         nav_projects: "Projets",
         nav_cv: "CV",
         nav_contact: "Contact",
         footer_copy: "© 2025 Matheïs Gilbrin • Étudiant IUT Annecy",
 
-        // Page About
-        hero_subtitle: "Étudiant en BUT Informatique & Data",
+        hero_subtitle: "Étudiant en BUT Informatique",
         hero_desc: "Passionné par le développement web et l'administration de données. Je transforme la curiosité en compétences concrètes.",
         btn_see_projects: "Voir mes projets",
         btn_contact_me: "Contactez moi",
@@ -29,14 +25,12 @@ const traductions = {
         hobby_title: "⌛ Mes passe-temps",
         hobby_desc: "La musique m'accompagne souvent dans la programmation. Sortir avec mes amis me permet de m'aérer l'esprit. Ma famille est également très importante à mes yeux.",
 
-        // Page Projets
         proj_title: "Mes Réalisations",
         filter_all: "Tous",
         filter_web: "Web (PHP/JS)",
         filter_data: "Data (SQL/BI)",
         filter_python: "Python",
         
-        // Projet Laravel
         p_laravel_date: "Oct 2025 - Jan 2026",
         p_laravel_title: "Application Web Laravel",
         p_laravel_place: "👥 Projet Universitaire (Équipe de 4)",
@@ -44,29 +38,24 @@ const traductions = {
         p_laravel_details: "<strong>Détails :</strong> Authentification sécurisée, gestion des rôles.",
         btn_repo: "Voir le dépôt",
 
-        // Projet Portfolio
         p_port_desc: "Site Portfolio JS",
         btn_code: "Voir le Code",
 
-        // Projet Data
         p_data_title: "Dashboard Data & BI",
         p_data_place: "👥 Projet SAE en équipe - IUT Annecy",
         p_data_desc: "Conception d'un tableau de bord décisionnel interactif connecté à une base de données.",
         p_data_details: "<strong>Analyse :</strong> KPI dynamiques, filtrage par date, analyse des tendances.",
         btn_download: "Télécharger le rapport Excel",
 
-        // Projet Mairie
         p_mairie_title: "Site Web Mairie de Péron",
         p_mairie_place: "👥 Projet d'équipe - Lycée Saint Exupéry",
         p_mairie_desc: "Conception et développement complet du site web institutionnel pour la mairie.",
         p_mairie_details: "<strong>Fonctionnalités :</strong> Actualités administrables, formulaire de contact, design responsive.",
         btn_visit: "Visiter le site",
         
-        // Boutons génériques projets
         btn_see_more: "Voir plus ↓",
         btn_see_less: "Voir moins ↑",
 
-        // Page CV
         cv_pdf: "📥 PDF",
         title_formation: "🎓 Formation",
         cv_but_title: "BUT Informatique",
@@ -101,7 +90,6 @@ const traductions = {
         ref_chris_role: "Enseignant Chercheur - IUT Annecy",
         ref_steph_role: "Professeure & Coordinatrice Internationale",
 
-        // Page Contact
         form_name: "Nom",
         form_email: "Email",
         form_email_help: "Cela m'aidera à vous répondre via un mail.",
@@ -110,14 +98,12 @@ const traductions = {
         btn_send: "Envoyer"
     },
     en: {
-        // Header & Footer
         nav_about: "About",
         nav_projects: "Projects",
         nav_cv: "CV",
         nav_contact: "Contact",
         footer_copy: "© 2025 Matheïs Gilbrin • IT Student IUT Annecy",
 
-        // Page About
         hero_subtitle: "IT & Data Student",
         hero_desc: "Passionate about web development and data administration. I turn curiosity into concrete skills.",
         btn_see_projects: "See my projects",
@@ -130,14 +116,12 @@ const traductions = {
         hobby_title: "⌛ My Hobbies",
         hobby_desc: "Music often accompanies me while programming. Going out with friends allows me to clear my mind. My family is also very important to me.",
 
-        // Page Projets
         proj_title: "My Achievements",
         filter_all: "All",
         filter_web: "Web (PHP/JS)",
         filter_data: "Data (SQL/BI)",
         filter_python: "Python",
 
-        // Projet Laravel
         p_laravel_date: "Oct 2025 - Jan 2026",
         p_laravel_title: "Laravel Web App",
         p_laravel_place: "👥 University Project (Team of 4)",
@@ -145,29 +129,24 @@ const traductions = {
         p_laravel_details: "<strong>Details:</strong> Secure Auth, role management.",
         btn_repo: "View Repo",
 
-        // Projet Portfolio
         p_port_desc: "JS Portfolio Site",
         btn_code: "View Code",
 
-        // Projet Data
         p_data_title: "Data & BI Dashboard",
         p_data_place: "👥 SAE Team Project - IUT Annecy",
         p_data_desc: "Design of an interactive decision-making dashboard connected to a database.",
         p_data_details: "<strong>Analysis:</strong> Dynamic KPIs, date filtering, trend analysis.",
         btn_download: "Download Excel Report",
 
-        // Projet Mairie
         p_mairie_title: "Town Hall Website",
         p_mairie_place: "👥 Team Project - Saint Exupéry High School",
         p_mairie_desc: "Complete design and development of the institutional website for the town hall.",
         p_mairie_details: "<strong>Features:</strong> Manageable news, contact form, responsive design.",
         btn_visit: "Visit Website",
 
-        // Boutons génériques
         btn_see_more: "See more ↓",
         btn_see_less: "See less ↑",
 
-        // Page CV
         cv_pdf: "📥 PDF",
         title_formation: "🎓 Education",
         cv_but_title: "BUT Computer Science",
@@ -202,7 +181,6 @@ const traductions = {
         ref_chris_role: "Associate Professor - IUT Annecy",
         ref_steph_role: "English Professor & Int. Coordinator",
 
-        // Page Contact
         form_name: "Name",
         form_email: "Email",
         form_email_help: "This will help me reply via email.",
@@ -221,7 +199,6 @@ function chargerPage(page) {
         .then(r => r.text())
         .then(html => {
             document.getElementById("contenu").innerHTML = html;
-            // Appliquer la langue immédiatement après le chargement
             majLangue();
             configurerEvenementsPage(page);
         })
@@ -231,7 +208,6 @@ function chargerPage(page) {
 function majLangue() {
     const t = traductions[langueActuelle];
     
-    // 1. Traduire les éléments marqués avec data-lang
     const elementsAtraduire = document.querySelectorAll("[data-lang]");
     elementsAtraduire.forEach(el => {
         const key = el.getAttribute("data-lang");
@@ -240,13 +216,19 @@ function majLangue() {
         }
     });
 
-    // 2. Mettre à jour le bouton de langue
     document.getElementById("toggleLang").textContent = langueActuelle === "fr" ? "EN" : "FR";
 
-    // 3. Mettre à jour les textes des boutons "Voir plus" s'ils sont ouverts/fermés
+    const lienCV = document.getElementById("lien_cv_pdf");
+    if (lienCV) {
+        if (langueActuelle === "fr") {
+            lienCV.href = "pages/Matheis_GILBRIN_CV.pdf";
+        } else {
+            lienCV.href = "pages/Matheis_GILBRIN_CV_EN.pdf";
+        }
+    }
+
     const btnsDetails = document.querySelectorAll('.bouton-voir-details');
     btnsDetails.forEach(btn => {
-        // On vérifie l'état visuel pour remettre le bon texte
         const bulle = btn.closest('.bulle-info');
         if(bulle){
             const details = bulle.querySelector('.details-projet');
@@ -259,9 +241,23 @@ function majLangue() {
     });
 }
 
+    document.getElementById("toggleLang").textContent = langueActuelle === "fr" ? "EN" : "FR";
+
+    const btnsDetails = document.querySelectorAll('.bouton-voir-details');
+    btnsDetails.forEach(btn => {
+        const bulle = btn.closest('.bulle-info');
+        if(bulle){
+            const details = bulle.querySelector('.details-projet');
+            if (details && details.style.display === 'block') {
+                btn.innerHTML = t.btn_see_less;
+            } else {
+                btn.innerHTML = t.btn_see_more;
+            }
+        }
+    });
+
 function configurerEvenementsPage(page) {
     
-    // Page Présentation
     if (page === 'about') {
         const btnProjets = document.getElementById('action_projets');
         const btnContact = document.getElementById('action_contact');
@@ -278,7 +274,6 @@ function configurerEvenementsPage(page) {
         }
     }
 
-    // Page Projets
     if (page === 'projects') {
         const boutonsFiltre = document.querySelectorAll('.bouton-filtre');
         const lignesProjet = document.querySelectorAll('.ligne-projet');
@@ -312,7 +307,6 @@ function configurerEvenementsPage(page) {
                 const bulle = e.target.closest('.bulle-info');
                 const divDetails = bulle.querySelector('.details-projet');
                 
-                // On ré-récupère les traductions actuelles
                 const currentT = traductions[langueActuelle];
 
                 if (divDetails.style.display === 'block') {
@@ -327,10 +321,8 @@ function configurerEvenementsPage(page) {
     }
 }
 
-// Charger la page par défaut
 chargerPage("about");
 
-// Gestion du menu
 const boutonsMenu = document.querySelectorAll(".bouton-nav");
 
 boutonsMenu.forEach(btn => {
@@ -341,7 +333,6 @@ boutonsMenu.forEach(btn => {
     });
 });
 
-// Gestion de la langue
 document.getElementById("toggleLang").addEventListener("click", () => {
     langueActuelle = langueActuelle === "fr" ? "en" : "fr";
     majLangue();
