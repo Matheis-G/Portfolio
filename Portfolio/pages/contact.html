@@ -1,35 +1,31 @@
-     
-
-        
-        
 <form
 action="https://formspree.io/f/{FORM_ID}"
-class="fs-form"
+class="formulaire-contact"
 target="_top"
 method="POST"
 >
-<div class="fs-field">
-  <label class="fs-label" for="name">Nom</label>
-  <input class="fs-input" id="name" name="name" required />
+<div class="champ-formulaire">
+  <label class="etiquette-formulaire" for="name" data-lang="form_name">Nom</label>
+  <input class="entree-formulaire" id="name" name="name" required />
 </div>
-<div class="fs-field">
-  <label class="fs-label" for="email">Email</label>
-  <input class="fs-input" id="email" name="email" required />
-  <p class="fs-description">
+<div class="champ-formulaire">
+  <label class="etiquette-formulaire" for="email" data-lang="form_email">Email</label>
+  <input class="entree-formulaire" id="email" name="email" required />
+  <p class="description-champ" data-lang="form_email_help">
     Cela m'aidera à vous répondre via un mail.
   </p>
 </div>
-<div class="fs-field">
-  <label class="fs-label" for="message">Message</label>
+<div class="champ-formulaire">
+  <label class="etiquette-formulaire" for="message" data-lang="form_msg">Message</label>
   <textarea
-    class="fs-textarea"
+    class="zone-texte-formulaire"
     id="message"
     name="message"
     required
   ></textarea>
-  <p class="fs-description">De quoi voulez-vous parler ?</p>
+  <p class="description-champ" data-lang="form_msg_help">De quoi voulez-vous parler ?</p>
 </div>
-<div class="fs-button-group">
-  <button class="fs-button" type="submit">Submit</button>
+<div class="groupe-bouton-formulaire">
+  <button class="bouton-plein" type="submit" data-lang="btn_send">Envoyer</button>
 </div>
 </form>
